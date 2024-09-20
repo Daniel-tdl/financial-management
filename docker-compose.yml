@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - "5432:5432"
+  app:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    image: financial-management-api
+    container_name: financial-management-app
+    ports:
+      - "8080:8080"
+

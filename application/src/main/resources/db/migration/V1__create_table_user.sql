@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS Usuarios (
+    username VARCHAR(250) PRIMARY KEY,
+    password VARCHAR(250) NOT NULL
+);
