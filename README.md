@@ -14,7 +14,7 @@ Arquitetura utilizada: Hexagonal
 
 A API utiliza [OAuth2](https://oauth.net/2/) como forma de autenticação/autorização.
 
-## Solicitando tokens de acesso [/oauth/access_token]
+## Solicitando tokens de acesso
 
 Para testar a API, é preciso gerar um token na API ( /authenticate ), exemplo a seguir.
 
@@ -27,35 +27,35 @@ Para testar a API, é preciso gerar um token na API ( /authenticate ), exemplo a
 
 # Recursos
 
-### [POST /account]
+#### [POST /account]
 
 Cadastrar conta
 
-### [GET /account/{id}]
+#### [GET /account/{id}]
 
 Atualizar conta
 
 
-###  [PUT /account/{id}]
+####  [PUT /account/{id}]
 
 Alterar a situação da conta
 
 
-### [PUT /account/situacao/{situacao}/id/{id}]
+#### [PUT /account/situacao/{situacao}/id/{id}]
 
 Obter a lista de contas a pagar, com filtro de data de vencimento e descrição 
 
-###  [GET /account/list-accounts-payable]
+####  [GET /account/list-accounts-payable]
 
 Obter conta filtrando o id
 
 
-###  [GET /account/get-total-amount-paid-period]
+####  [GET /account/get-total-amount-paid-period]
 
 Obter valor total pago por período 
 
 
-###  [POST /account/upload]
+####  [POST /account/upload]
 
-Upload de arquivo csv
+Upload de arquivo csv, na pasta de resourses do projeto tem o exemplo do arquivo csv que pode ser importado as contas em lote.
 
