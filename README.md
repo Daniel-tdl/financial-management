@@ -3,20 +3,59 @@
 Sistema de gestão financeira
 
 ## Especificações técnicas
-- Java 21
-- SpringBoot 3.2.0
-- postgresql
-- JUnit 5
-- Mapstruct 1.5.5
-- Lombok
-- Maven 3.9.2
 
 Arquitetura utilizada: Hexagonal
 
-- Lombok e Mapstruct
-- Testes com `Junit 5` e `Mockito`
-- Ambiente `Spring + Sprinboot`
-    - `Spring Data postgresql`
-    
-- Banco relacional: `postgresql`
+- Java 21
+- SpringBoot 3.2.0
+- postgresql
+
+# Autenticação - OAuth
+
+A API utiliza [OAuth2](https://oauth.net/2/) como forma de autenticação/autorização.
+
+## Solicitando tokens de acesso [/oauth/access_token]
+
+Para testar a API, é preciso gerar um token na API ( /authenticate ), exemplo a seguir.
+
+#### Dados para gerar o token [POST /authenticate]
+| Parâmetro | Descrição |
+|---|---|
+| `username` | Informar: `username` |
+| `password` | Informar: `password` |
+
+
+# Recursos
+
+### [POST /account]
+
+Cadastrar conta
+
+### [GET /account/{id}]
+
+Atualizar conta
+
+
+###  [PUT /account/{id}]
+
+Alterar a situação da conta
+
+
+### [PUT /account/situacao/{situacao}/id/{id}]
+
+Obter a lista de contas a pagar, com filtro de data de vencimento e descrição 
+
+###  [GET /account/list-accounts-payable]
+
+Obter conta filtrando o id
+
+
+###  [GET /account/get-total-amount-paid-period]
+
+Obter valor total pago por período 
+
+
+###  [POST /account/upload]
+
+Upload de arquivo csv
 
