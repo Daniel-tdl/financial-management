@@ -16,7 +16,8 @@ spring:
           lob:
             non_contextual_creation: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/financial-management
+    url: jdbc:postgresql://host.docker.internal:5432/financial-management
+    #url: jdbc:postgresql://localhost:5432/financial-management
     username: postgres
     password: postgres
 

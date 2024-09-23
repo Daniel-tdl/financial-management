@@ -33,7 +33,7 @@ public class UpdateAccountService implements UpdateAccountUseCase {
             var entity = accountMapper.buildUpdateRequestToEntity(id, request);
             var entityDB = accountPort.save(entity);
             var response = accountMapper.buildEntityToDTO(entityDB);
-            log.info("conta de id: {} atualizada com sucesso.", entity.getId());
+            log.info("conta de id: {} atualizada com sucesso.", entityDB.getId());
             return response;
         } catch (Exception e) {
             massageLog(id, e);
@@ -54,7 +54,7 @@ public class UpdateAccountService implements UpdateAccountUseCase {
             entity.setStatus(status);
             var entityDB = accountPort.save(entity);
             var response = accountMapper.buildEntityToDTO(entityDB);
-            log.info("Status da conta de id: {} atualizada com sucesso.", entity.getId());
+            log.info("Status da conta de id: {} atualizada com sucesso.", response.getId());
             return response;
         } catch (Exception e) {
             massageLog(id, e);

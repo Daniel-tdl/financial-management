@@ -57,7 +57,7 @@ public class FindAccountService implements FindAccountUseCase {
 
     private void checkDataPeriod(AccountTotalAmountRequest request) {
         if (request.getDateStart().isAfter(request.getDateEnd()))
-            throw new DataInvalidException("Data inicial não pode esta maior que o data final do periodo!");
+            throw new DataInvalidException("Data inicial não pode ser maior que o data final do periodo!");
     }
 
     private AccountTotalAmountDTO buildAccountTotalAmountDTO(Page<AccountEntity> entities) {
